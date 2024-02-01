@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mainbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContainer {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.empty{
+    margin-top:100px;
+}

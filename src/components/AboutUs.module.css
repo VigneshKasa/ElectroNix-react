@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mainbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.homeContainer {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.about {
+    margin-top:100px;
+    display: flex;
+    padding-left: 100px;
+    justify-content: start;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #dcdcdc;
+    margin-bottom:30px;
+
+}
+
+
+.aboutContainer{
+    display: flex;
+    height:600px;
+    margin-bottom:30px;
+    border:1px solid #dcdcdc;
+    border-radius: 25px;
+}
+
+.aboutinfoContainer{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    padding:50px;
+    border-top-left-radius:25px;
+    border-bottom-left-radius:25px;
+}
+.aboutWelcome{
+    padding-top:100px;
+    color:#EB642B;
+    font-size:20px;
+}
+.aboutTitle{
+    margin-top:20px;
+    font-weight: 900;   
+    font-size:60px;
+}
+.aboutInfo{
+    margin-top:20px;
+    text-align: justify;
+    font-size:18px;
+}
+.aboutCoverImage{
+    border-top-right-radius:25px;
+    border-bottom-right-radius:25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:50%;    
+}
+.aboutCoverImage img{
+    height:400px;
+    border-radius:25px;
+}

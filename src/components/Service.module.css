@@ -1,0 +1,29 @@
+
+.serviceBox {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    background-color: black;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    color: white;
+}
+
+.serviceContainer {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.serviceIcon {
+    color: #EB642B;
+    font-size: 30px;
+}
+
+.serviceText {
+    font-weight: 700;
+    font-size: 35px;
+}

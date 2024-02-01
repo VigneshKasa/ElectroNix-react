@@ -1,0 +1,8 @@
+
+.halfBanner {
+    height: 350px;
+    width: 100%;
+    background-color: #dcdcdc;
+    border-radius: 25px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,14 @@
+.companyBanner {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #dcdcdc;
+    border-radius: 25px;
+    margin-bottom: 30px;
+}
+
+img{
+    height:80px;
+}
