@@ -7,7 +7,6 @@ import Products from "./Products";
 import HalfBanner from "./HalfBanner";
 import Companies from "./Companies";
 
-
 function Home() {
   return (
     <>
@@ -17,10 +16,9 @@ function Home() {
           <Banner></Banner>
           <BannerBox1></BannerBox1>
           <BannerBox2></BannerBox2>
+          <HalfBanner />
           <Service></Service>
-          <Products></Products>
           <Companies></Companies>
-          <HalfBanner/>
         </div>
       </div>
     </>

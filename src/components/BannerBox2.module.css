@@ -1,0 +1,201 @@
+.bannerBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.squareBanner1 {
+    background-color: #476bed;
+    height: 350px;
+    border-radius: 25px;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.squareBanner1:hover{
+    transition:300ms;
+    box-shadow:#476bedb5 0px 20px 30px;
+}
+.sqrbannerTitle1 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    width: 100%;
+    color: #aab9ed;
+}
+
+.sqrbannerDescription1 {
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+}
+
+.sqrbannerButoon1 {
+    margin-top: 20px;
+    background-color: white;
+    color:#476bed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 80px;
+    padding: 5px;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.sqrbannerButoon1:hover {
+    transition: 600ms;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+.sqrbannerImg1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sqrbannerImg1 img {
+    height: 150px;
+    margin:10px 0px;
+}
+.squareBanner2 {
+    background-color: #00ff90;
+    height: 350px;
+    border-radius: 25px;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.squareBanner2:hover{
+    transition:300ms;
+    box-shadow:#00ff918d 0px 20px 30px;
+}
+
+.sqrbannerTitle2 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    width: 100%;
+    color: #dbfeef;
+}
+
+.sqrbannerDescription2 {
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+}
+
+
+.sqrbannerImg2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sqrbannerImg2 img {
+    height: 170px;
+}
+.sqrbannerButoon2 {
+    margin-top: 20px;
+    background-color: white;
+    color:#00ff90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 80px;
+    padding: 5px;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.sqrbannerButoon2:hover {
+    transition: 600ms;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+
+.rectBanner {
+    background-color: #dcdcdc;
+    height: 350px;
+    width: 700px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.rectBanner:hover{
+    transition:300ms;
+    box-shadow:#dcdcdc 0px 20px 30px;
+}
+.rectInfo{
+    width:40%;
+    display: flex;
+    flex-direction: column;
+}
+.rectbannerDescription{
+    color:rgb(178, 176, 176);
+    padding:10px;
+    font-weight:bold;
+    font-weight:900;
+    font-size: 25px;
+}
+.rectbannerTitle{
+    color:rgb(0, 0, 0);
+    padding:10px;
+    font-weight:900;
+    font-size: 35px;
+}
+.rectbannerButoon{
+    margin-top: 95px;
+    background-color: #EB642B;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 80px;
+    padding: 5px;
+    margin-left:15px;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.rectbannerButoon:hover{
+    background-color: #0886e0;
+    transition:300ms;
+}
+.rectbannerImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rectbannerImg img{
+    padding: 10px;
+height:200px;
+}

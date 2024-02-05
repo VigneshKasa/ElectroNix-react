@@ -9,76 +9,91 @@
     display: flex;
     width: 100%;
     height: 100px;
-    padding:0px 50px;
+    padding: 0px 50px;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     color: white;
-margin-bottom:30px;
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 30px;
 
 }
 
 .navlist ul {
     display: flex;
     gap: 50px;
-    color:#7d7d7d;
+    color: #7d7d7d;
+    font-size: 17px;
     text-decoration: none;
 }
-.logo{
+
+.logo {
     cursor: pointer;
     height: 100px;
 }
 
-.logo img{
+.logo img {
 
-    height: 100px;
+    height: 90px;
 }
 
 
- li {
+li {
+    cursor: pointer;
     list-style: none;
 }
-.navlist li:hover{
-    color:#dcdcdc;
-    transition:300ms;
+
+.navlist li:hover {
+    color: #000000;
+    transition: 300ms;
 }
-.active{
+
+.active {
     color: #EB642B;
 }
-.cart{
+
+.cart {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:35px;
+    gap: 35px;
 
 }
-.login{
+
+.login {
     cursor: pointer;
-
+    color: black;
+    font-weight:600;
 }
-.cartValue{
+
+.cartValue {
     position: relative;
     height: 20px;
     width: 20px;
-    left:15px;
-    top:10px;
+    left: 15px;
+    top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius:50%;
+    border-radius: 50%;
     background-color: #f42c37;
-    font-size:10px;
+    color: white;
+    font-size: 10px;
 }
-.carticon{
+
+.carticon {
     cursor: pointer;
-    font-size:30px;
+    color: #000000;
+    font-size: 25px;
 }
-.login:hover{
-    color:#EB642B;
-    transition:300ms;
+
+.login:hover {
+    color: #EB642B;
+    transition: 300ms;
 }
-.carticon:hover{
-    color:#EB642B;
-    transition:300ms;
-    
+
+.carticon:hover {
+    color: #EB642B;
+    transition: 300ms;
+
 }

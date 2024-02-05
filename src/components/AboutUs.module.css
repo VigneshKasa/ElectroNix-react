@@ -36,10 +36,10 @@
 
 .aboutContainer{
     display: flex;
-    height:600px;
+    height:550px;
     margin-bottom:30px;
-    border:1px solid #dcdcdc;
     border-radius: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .aboutinfoContainer{
@@ -51,7 +51,7 @@
     border-bottom-left-radius:25px;
 }
 .aboutWelcome{
-    padding-top:100px;
+    padding-top:30px;
     color:#EB642B;
     font-size:20px;
 }

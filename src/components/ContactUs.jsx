@@ -1,10 +1,9 @@
 import styles from "./ContactUs.module.css";
-import Service from "./Service";
-import Companies from "./Companies";
 import map from "/images/map.png";
 import { TfiEmail } from "react-icons/tfi";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 function ContactUs() {
   return (
@@ -63,9 +62,9 @@ function ContactUs() {
             </div>
             <div className={styles.contactBoxContainer}>
               <div className={styles.contactIcon}>
-                <FaPhoneAlt />
+                <FaFacebook />
               </div>
-              <div className={styles.contactName}>+91- 9xxxxx7777</div>
+              <div className={styles.contactName}>ElectroNixOfficial</div>
             </div>
             <div className={styles.contactBoxContainer}>
               <div className={styles.contactIcon}>

@@ -1,14 +1,13 @@
-
 .serviceBox {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 150px;
     width: 100%;
-    background-color: black;
+    background-color: #dcdcdc;
     margin-bottom: 30px;
     border-radius: 25px;
-    color: white;
+    color: black;
 }
 
 .serviceContainer {

@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-import logo from "/images/ElectroNix3.png";
+import logo from "/images/electronixlogo2.png";
 import { RiShoppingCart2Line } from "react-icons/ri";
 
 function Header({SelectedTab,setSelectedTab}) {
@@ -8,7 +8,7 @@ function Header({SelectedTab,setSelectedTab}) {
     <>
       <div className={styles.navbar }>
         <div className={styles.logo}>
-          <img src={logo} alt="electronix" />
+          <img src={logo} alt="electronix" onClick={()=>setSelectedTab("Home")}/>
         </div>
         <div className={styles.navlist}>
           <ul>
@@ -19,7 +19,7 @@ function Header({SelectedTab,setSelectedTab}) {
           </ul>
         </div>
         <div className={styles.cart}>
-          <div className={styles.login}>Login</div>
+          <div className={styles.login} onClick={()=>setSelectedTab("Login")} >Login</div>
           <div className={styles.carticon}><div className={styles.cartValue}>7</div><RiShoppingCart2Line /></div>
         </div>
       </div>

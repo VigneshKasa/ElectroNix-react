@@ -24,7 +24,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #f6f6f6;
 }
 
 .nav ul {
@@ -37,10 +37,12 @@
 .navIcon{
     font-size:20px;
     padding:0px 50px;
-
-
 }
 
+.navIcon:hover{
+    transition:300ms;
+    color: #EB642B;
+}
 .store {
     display: flex;
     padding-left: 100px;

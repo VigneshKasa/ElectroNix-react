@@ -1,6 +1,5 @@
 import styles from "./Store.module.css";
 import HalfBanner from "./HalfBanner";
-import Service from "./Service";
 import Products from "./Products";
 import Companies from "./Companies";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
@@ -28,17 +27,17 @@ function Store() {
             </li>
             <li>
               <div className={styles.navIcon}>
+                <LuMonitor />
+              </div>
+            </li>
+            <li>
+              <div className={styles.navIcon}>
                 <FiHeadphones />
               </div>
             </li>
             <li>
               <div className={styles.navIcon}>
                 <IoGameControllerOutline />
-              </div>
-            </li>
-            <li>
-              <div className={styles.navIcon}>
-                <LuMonitor />
               </div>
             </li>
             <li>
@@ -53,9 +52,7 @@ function Store() {
         <div className={styles.homeContainer}>
           <Products></Products>
           <HalfBanner />
-          <HalfBanner></HalfBanner>
           <Companies></Companies>
-          <Service></Service>
         </div>
       </div>
     </>

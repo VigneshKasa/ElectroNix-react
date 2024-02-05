@@ -1,10 +1,4 @@
 import styles from "./Footer.module.css";
-import { FaInstagram } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-
 
 function Footer() {
   return (
@@ -39,13 +33,6 @@ function Footer() {
               <li>www.Electronix.in</li>
             </ul>
           </div>
-        </div>
-        <div className={styles.contacts}>
-         <div className={styles.contactIcons}><FaInstagram/></div>
-         <div className={styles.contactIcons}><FaFacebook/></div>
-         <div className={styles.contactIcons}><FaXTwitter/></div>
-         <div className={styles.contactIcons}><FaYoutube/></div>
-         <div className={styles.contactIcons}><FaLinkedinIn/></div>
         </div>
         <div className={styles.copyright}>
           <p>
