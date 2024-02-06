@@ -117,3 +117,116 @@
     transition: 300ms;
     cursor: pointer;
 }
+
+@media only screen and (max-width:600px){
+
+    .ProductsText {
+        padding-bottom: 10px;
+        font-family: "poppins";
+        font-size: 20px;
+    }
+    
+    .ProductsText b {
+        font-family: "poppins";
+    }
+    
+    .ProductsCaption {
+        color: #EB642B;
+        padding-bottom: 10px;
+    }
+    
+    .productBox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .products {
+        height: 200px;
+        width: 160px;
+        border-radius: 25px;
+        background-color: #ffffff;
+        margin-bottom: 30px;
+        border:2px solid #dcdcdc;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .productImg {
+        display: flex;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    
+    }
+    
+    .productImg img {
+        height: 100px;
+    }
+    .productInfo{
+        border-top:1px solid #dfdfdf;
+    }
+    .productBrandInfo {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .productBrand {
+        color: gray;
+        font-weight: 600;
+        font-size:12px;
+    }
+    
+    .productItem {
+        font-family: "poppins";
+        color: black;
+        font-size:10px;
+    }
+    .productReview{
+        color: #EB642B;
+        font-weight:600;
+        text-decoration: underline;
+        font-size:7px;
+    }
+    
+    .productPrice {
+        font-size:10px;
+        font-family:"poppins";
+        color: black;
+        font-weight: 600;
+    }
+    
+    .addButtonContainer {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .addButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 25px;
+        font-size: 7px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+    }
+    
+    .addButton:hover {
+        transform: scale(1.1);
+        background-color: #EB642B;
+        transition: 300ms;
+        cursor: pointer;
+    }
+}

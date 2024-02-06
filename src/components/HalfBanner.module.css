@@ -73,5 +73,62 @@ background-color:#0886e0;
     width:50%;
 }
 .bannerImg img{
-      height:300px;
+      height:250px;
+}
+@media only screen and (max-width:600px){
+    .halfBanner {
+        height: 200px;
+        width:100%;
+    }
+    .bannerTitle1{
+        font-size: 25px;
+        font-weight:700;
+        font-family:"Montserrat";
+        text-align: center;
+        color: white;
+        width: 100%;
+        }
+        .bannerTitle2{
+            font-size: 20px;
+            font-weight:700;
+            color:#666666;
+            font-family:"Montserrat";
+            text-align: center;
+            width: 100%;
+            }
+        .bannerDescription{
+        font-size: 30px;
+        font-weight: 900;
+        color:rgb(248, 248, 248);
+        text-align: center;
+        padding-left:90px;
+        padding:10px 0px;
+        width: 100%;
+        }
+        .bannerButoon{
+            background-color:#EB642B;
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:20px;
+            width:55px;
+            padding:5px;
+            border-radius:18px;
+            cursor: pointer;
+            font-size:8px;
+        }
+        .bannerButoon:hover{
+            transition: 600ms;
+            color:white;
+        background-color:#0886e0;
+        }
+        .bannerImg{
+            display: flex;
+            justify-content: center;
+            width:50%;
+        }
+        .bannerImg img{
+              height:90px;
+        }
 }

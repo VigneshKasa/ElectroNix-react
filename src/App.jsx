@@ -9,7 +9,7 @@ import Login from "./components/Login";
 import { useState } from "react";
 
 function App() {
-  const [SelectedTab, setSelectedTab] = useState("Home");
+  const [SelectedTab, setSelectedTab] = useState("Login");
   return (
     <>
       <Header SelectedTab={SelectedTab} setSelectedTab={setSelectedTab} />

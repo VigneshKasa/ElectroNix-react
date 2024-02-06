@@ -69,3 +69,58 @@
     color: black;
 }
 
+@media only screen and (max-width:600px){
+    .nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        background-color: #f6f6f6;
+    }
+    
+    .nav ul {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        gap:10px;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style: none;
+        padding:20px;
+    }
+    .navIcon{
+        font-size:20px;
+        padding:0px 35px;
+    }
+    
+    .navIcon:hover{
+        transition:300ms;
+        color: #EB642B;
+    }
+    .store {
+        display: flex;
+        padding-left: 50px;
+        justify-content: start;
+        align-items: center;
+        height:30px;
+        width: 100%;
+        font-size:15px;
+        font-weight: bold;
+        background-color: #dcdcdc;
+    }
+    
+    .title {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height:30px;
+        width: 100%;
+        font-size:12px;
+        padding-left:50px;
+        font-weight: normal;
+        background-color: #dcdcdc;
+        margin-bottom: 30px;
+        color: black;
+    }
+    
+}

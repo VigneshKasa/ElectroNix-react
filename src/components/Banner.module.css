@@ -73,3 +73,80 @@ background-color: #0886e0;
 .bannerImg img{
       height:500px;
 }
+
+@media only screen and (max-width:600px){
+    .banner {
+        margin-top: 10px;
+        height: 200px;
+        width: 100%;
+        background-color: #dcdcdc;
+        border-radius: 25px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bannerContainer{
+        font-family:"Poppins";
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+    .bannerInfo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+    }
+    .bannerTitle1{
+    font-size: 30px;
+    font-weight:700;
+    font-family:"Montserrat";
+    text-align: center;
+    width: 100%;
+    }
+    .bannerTitle2{
+        font-size: 20px;
+        font-weight:700;
+        font-family:"Montserrat";
+        text-align: center;
+        width: 100%;
+        }
+    .bannerDescription{
+    font-size: 30px;
+    font-weight: 900;
+    color:rgb(248, 248, 248);
+    text-align: center;
+    padding-left:30px;
+    width: 100%;
+    }
+    .bannerButoon{
+        margin-top:20px;
+        background-color:#EB642B;
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:20px;
+        width:50px;
+        padding:5px;
+        border-radius:15px;
+        cursor: pointer;
+        font-size:8px;
+    }
+    .bannerButoon:hover{
+        transition: 300ms;
+    background-color: #0886e0;
+    }
+    .bannerImg{
+        display: flex;
+        justify-content: center;
+        width:50%;
+    }
+    .bannerImg img{
+          height:200px;
+    }
+}    

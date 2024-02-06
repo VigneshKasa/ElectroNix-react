@@ -3,7 +3,6 @@ import logo from "/images/electronixlogo2.png";
 import { RiShoppingCart2Line } from "react-icons/ri";
 
 function Header({SelectedTab,setSelectedTab}) {
-//  const [SelectedTab,setSelectedTab]=useState("home")
   return (
     <>
       <div className={styles.navbar }>

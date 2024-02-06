@@ -1,5 +1,6 @@
 .companyBanner {
     display: flex;
+    flex-wrap: wrap;
     height: 200px;
     width: 100%;
     justify-content: space-evenly;
@@ -11,4 +12,12 @@
 
 img{
     height:80px;
+}
+@media only screen and (max-width:600px){
+    .companyBanner {
+        height:100px;
+    }
+    img{
+        height:40px;
+    }
 }

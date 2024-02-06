@@ -36,7 +36,7 @@ function Footer() {
         </div>
         <div className={styles.copyright}>
           <p>
-            © 2024 <b>ElectroNix.. </b>A Electronics and Gadgets Store. All
+            © 2024 <b>ElectroNix. </b>A Electronics and Gadgets Store. All
             rights reserved.
           </p>
         </div>
