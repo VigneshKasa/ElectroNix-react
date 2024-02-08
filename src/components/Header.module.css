@@ -27,6 +27,7 @@
     text-decoration: none;
 }
 
+
 .logo {
     cursor: pointer;
     height: 100px;
@@ -47,10 +48,20 @@ li {
     color: #000000;
     transition: 300ms;
 }
+.navItemContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .active {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     color: #EB642B;
-    font-weight:600;
+    font-weight: 600;
 }
 
 .cart {
@@ -60,11 +71,16 @@ li {
     gap: 35px;
 
 }
-
-.login {
+.cart .navItemIcon{
+  color: black;
+}
+.navItemIcon{
+    display:flex;
+}
+.login{    
     cursor: pointer;
     color: black;
-    font-weight:600;
+    font-weight: 600;
 }
 
 .cartValue {
@@ -99,75 +115,82 @@ li {
 
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:600px) {
     .navbar {
         position: fixed;
         display: flex;
         width: 100%;
-        height: 100px;
-        padding: 0px 20px;
+        height: 90px;
+        padding: 0px 0px;
         justify-content: space-evenly;
         align-items: center;
         background-color: rgb(255, 255, 255);
         color: white;
         border-bottom: 1px solid #dcdcdc;
         margin-bottom: 30px;
-    
+
     }
-    
+
     .navlist ul {
         display: flex;
         flex-wrap: wrap;
-        gap:10px;
+        gap: 20px;
         color: #7d7d7d;
-        font-size:12px;
+        font-size: 12px;
         text-decoration: none;
     }
-    
+
     .logo {
         cursor: pointer;
-        height: 100px;
+        height: 60px;
     }
-    
+
     .logo img {
-    
-        height: 90px;
+
+        height: 60px;
     }
-    
-    
+
+
     li {
         cursor: pointer;
         list-style: none;
     }
-    
+.navItemIcon{
+    display: flex;
+    font-size:18px;
+}
+.navItemName{
+    font-size:8px;
+}
     .navlist li:hover {
-        color: #000000;
+        color: #EB642B;
         transition: 300ms;
     }
-    
+
     .active {
         color: #EB642B;
-        font-weight:600;
+        font-weight: 600;
     }
-    
+
     .cart {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 35px;
-    
+        gap:15px;
+
     }
-    
+
     .login {
         cursor: pointer;
         color: black;
-        font-weight:600;
+        font-size:8px;
+        font-weight: 600;
     }
-    
+
     .cartValue {
         position: relative;
-        height: 20px;
-        width: 20px;
+        height: 12px;
+        width: 12px;
         left: 15px;
         top: 10px;
         display: flex;
@@ -176,23 +199,23 @@ li {
         border-radius: 50%;
         background-color: #f42c37;
         color: white;
-        font-size: 10px;
+        font-size: 7px;
     }
-    
+
     .carticon {
         cursor: pointer;
         color: #000000;
         font-size: 25px;
     }
-    
+
     .login:hover {
         color: #EB642B;
         transition: 300ms;
     }
-    
+
     .carticon:hover {
         color: #EB642B;
         transition: 300ms;
-    
+
     }
 }

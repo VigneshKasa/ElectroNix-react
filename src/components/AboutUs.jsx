@@ -1,7 +1,7 @@
 import styles from "./AboutUs.module.css";
 import Service from "./Service";
 import Companies from "./Companies";
-import logo from "/images/electronixlogo2.png";
+import logo from "/images/logos/electronixlogo2.png";
 function AboutUs() {
   return (
     <>

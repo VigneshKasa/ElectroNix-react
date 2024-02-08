@@ -36,12 +36,19 @@
 }
 .navIcon{
     font-size:20px;
+    color: black;
     padding:0px 50px;
 }
 
 .navIcon:hover{
     transition:300ms;
+    color: gray;
+}
+.active{
+    font-size:20px;
+    padding:0px 50px;
     color: #EB642B;
+
 }
 .store {
     display: flex;
@@ -72,8 +79,8 @@
 @media only screen and (max-width:600px){
     .nav {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        justify-content:center;
+               align-items: center;
         width: 100%;
         background-color: #f6f6f6;
     }
@@ -81,8 +88,8 @@
     .nav ul {
         margin-top: 100px;
         display: flex;
-        justify-content: center;
-        gap:10px;
+        width:100%;
+        justify-content:space-evenly;
         flex-wrap: wrap;
         align-items: center;
         list-style: none;
@@ -90,9 +97,14 @@
     }
     .navIcon{
         font-size:20px;
-        padding:0px 35px;
+        padding:0px 5px;
     }
+    .active{
+        font-size:20px;
+        padding:0px 5px;
+        color: #EB642B;
     
+    }
     .navIcon:hover{
         transition:300ms;
         color: #EB642B;

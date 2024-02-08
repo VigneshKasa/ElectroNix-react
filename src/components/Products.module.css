@@ -117,6 +117,17 @@
     transition: 300ms;
     cursor: pointer;
 }
+.added {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
+    background-color: #0886e0;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
 
 @media only screen and (max-width:600px){
 
@@ -228,5 +239,11 @@
         background-color: #EB642B;
         transition: 300ms;
         cursor: pointer;
+    }
+    .added {
+        width: 60px;
+        height: 25px;
+        font-size: 7px;
+        border-radius: 10px;
     }
 }

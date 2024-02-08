@@ -1,15 +1,12 @@
 import styles from "./Companies.module.css";
-import apple from "/images/applelogo.png";
-import bose from "/images/boselogo.png";
-import ps5 from "/images/ps5logo.png";
-import samsung from "/images/samsunglogo.png";
-import dell from "/images/delllogo.png";
-import intel from "/images/intellogo.png";
-import lg from "/images/lglogo.png";
-import canon from "/images/canonlogo.png";
-
-// import brand5 from "/images/brand-05.png"
-// import brand6 from "/images/brand-06.png"
+import apple from "/images/logos/applelogo.png";
+import bose from "/images/logos/boselogo.png";
+import ps5 from "/images/logos/ps5logo.png";
+import samsung from "/images/logos/samsunglogo.png";
+import dell from "/images/logos/delllogo.png";
+import intel from "/images/logos/intellogo.png";
+import lg from "/images/logos/lglogo.png";
+import canon from "/images/logos/canonlogo.png";
 
 function Companies() {
   return (
