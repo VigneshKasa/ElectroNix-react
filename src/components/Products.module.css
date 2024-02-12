@@ -45,6 +45,7 @@
 
 .productImg {
     display: flex;
+    cursor: pointer;
     background-color: white;
     justify-content: center;
     align-items: center;
@@ -86,9 +87,12 @@
 }
 
 .productPrice {
+    display: flex;
+    align-items: center;
+    gap:2px;
     font-size: 18px;
-    font-family:"poppins";
     color: black;
+    font-family:"poppins";
     font-weight: 600;
 }
 
@@ -222,6 +226,9 @@
         align-items: center;
     }
     
+    .productPrice{
+        font-family:"poppins";
+        }
     .addButton {
         display: flex;
         align-items: center;

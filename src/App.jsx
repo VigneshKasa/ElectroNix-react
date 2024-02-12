@@ -7,6 +7,8 @@ import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
 import Login from "./components/Login";
 import { useState } from "react";
+import Cart from "./components/Cart";
+import ProductPreview from "./components/ProductPreview";
 
 function App() {
   const [SelectedTab, setSelectedTab] = useState("Home");
@@ -18,6 +20,7 @@ function App() {
       {SelectedTab === "About Us" && <AboutUs />}
       {SelectedTab === "Contact Us" && <ContactUs />}
       {SelectedTab === "Login" && <Login />}
+      {SelectedTab === "Cart" && <Cart />}
       <Footer />
     </>
   );

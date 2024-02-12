@@ -49,7 +49,9 @@ function Header({SelectedTab,setSelectedTab}) {
             <div className={styles.navItemIcon}><IoLogIn/></div>
           <div className={styles.login}>Login</div>
           </div>
-          <div className={styles.carticon}><div className={styles.cartValue}>7</div><RiShoppingCart2Line /></div>
+          <div className={SelectedTab==="Login"?styles.active:styles.navItemContainer} onClick={()=>setSelectedTab("Cart")} >
+          <div className={styles.carticon}><div className={styles.cartValue} >7</div><RiShoppingCart2Line /></div>
+        </div>
         </div>
       </div>
     </>
