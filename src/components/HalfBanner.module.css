@@ -1,135 +1,217 @@
-
 .halfBanner {
     height: 350px;
     width: 100%;
-    background-color:black;
+    background-color: black;
     border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
 }
-.bannerContainer{
-    font-family:"Poppins";
+
+.bannerContainer {
+    font-family: "Poppins";
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: center;
 }
-.bannerInfo{
+
+.bannerInfo {
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
-    width:50%;
+    width: 50%;
 }
-.bannerTitle1{
-font-size: 40px;
-font-weight:700;
-font-family:"Montserrat";
-text-align: center;
-color: white;
-width: 100%;
+
+.bannerTitle1 {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    color: white;
+    width: 100%;
 }
-.bannerTitle2{
+
+.bannerTitle2 {
     font-size: 30px;
-    font-weight:700;
-    color:#666666;
-    font-family:"Montserrat";
+    font-weight: 700;
+    color: #666666;
+    font-family: "Montserrat";
     text-align: center;
     width: 100%;
-    }
-.bannerDescription{
-font-size: 80px;
-font-weight: 900;
-color:rgb(248, 248, 248);
-text-align: center;
-padding-left:90px;
-padding:10px 0px;
-width: 100%;
 }
-.bannerButoon{
-    background-color:#EB642B;
+
+.bannerDescription {
+    font-size: 80px;
+    font-weight: 900;
+    color: rgb(248, 248, 248);
+    text-align: center;
+    padding-left: 90px;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.bannerButoon {
+    background-color: #EB642B;
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
-    height:40px;
-    width:120px;
-    padding:5px;
-    border-radius:18px;
+    height: 40px;
+    width: 120px;
+    padding: 5px;
+    border-radius: 18px;
     cursor: pointer;
-    font-size:13px;
+    font-size: 13px;
 }
-.bannerButoon:hover{
+
+.bannerButoon:hover {
     transition: 600ms;
-    color:white;
-background-color:#0886e0;
+    color: white;
+    background-color: #0886e0;
 }
-.bannerImg{
+
+.bannerImg {
     display: flex;
     justify-content: center;
-    width:50%;
+    width: 50%;
 }
-.bannerImg img{
-      height:250px;
+
+.bannerImg img {
+    height: 250px;
 }
-@media only screen and (max-width:600px){
+
+@media only screen and (max-width:600px) {
     .halfBanner {
         height: 200px;
-        width:100%;
-        margin-bottom:10px;
+        width: 100%;
+        margin-bottom: 10px;
     }
-    .bannerTitle1{
+
+    .bannerTitle1 {
         font-size: 25px;
-        font-weight:700;
-        font-family:"Montserrat";
+        font-weight: 700;
+        font-family: "Montserrat";
         text-align: center;
         color: white;
         width: 100%;
-        }
-        .bannerTitle2{
-            font-size: 20px;
-            font-weight:700;
-            color:#666666;
-            font-family:"Montserrat";
-            text-align: center;
-            width: 100%;
-            }
-        .bannerDescription{
+    }
+
+    .bannerTitle2 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #666666;
+        font-family: "Montserrat";
+        text-align: center;
+        width: 100%;
+    }
+
+    .bannerDescription {
         font-size: 30px;
         font-weight: 900;
-        color:rgb(248, 248, 248);
+        color: rgb(248, 248, 248);
         text-align: center;
-        padding-left:90px;
-        padding:10px 0px;
+        padding-left: 90px;
+        padding: 10px 0px;
         width: 100%;
-        }
-        .bannerButoon{
-            background-color:#EB642B;
-            color: rgb(255, 255, 255);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height:20px;
-            width:55px;
-            padding:5px;
-            border-radius:18px;
-            cursor: pointer;
-            font-size:8px;
-        }
-        .bannerButoon:hover{
-            transition: 600ms;
-            color:white;
-        background-color:#0886e0;
-        }
-        .bannerImg{
-            display: flex;
-            justify-content: center;
-            width:50%;
-        }
-        .bannerImg img{
-              height:90px;
-        }
+    }
+
+    .bannerButoon {
+        background-color: #EB642B;
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        width: 55px;
+        padding: 5px;
+        border-radius: 18px;
+        cursor: pointer;
+        font-size: 8px;
+    }
+
+    .bannerButoon:hover {
+        transition: 600ms;
+        color: white;
+        background-color: #0886e0;
+    }
+
+    .bannerImg {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .bannerImg img {
+        height: 90px;
+    }
+}
+
+@media only screen and ((max-width:1000px) and (min-width:601px)) {
+    .halfBanner {
+        height: 230px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .bannerTitle1 {
+        font-size: 30px;
+        font-weight: 700;
+        font-family: "Montserrat";
+        text-align: center;
+        color: white;
+        width: 100%;
+    }
+
+    .bannerTitle2 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #666666;
+        font-family: "Montserrat";
+        text-align: center;
+        width: 100%;
+    }
+
+    .bannerDescription {
+        font-size: 40px;
+        font-weight: 900;
+        color: rgb(248, 248, 248);
+        text-align: center;
+        padding-left: 90px;
+        padding: 10px 0px;
+        width: 100%;
+    }
+
+    .bannerButoon {
+        background-color: #EB642B;
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:30px;
+        width: 70px;
+        padding: 5px;
+        border-radius: 18px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .bannerButoon:hover {
+        transition: 600ms;
+        color: white;
+        background-color: #0886e0;
+    }
+
+    .bannerImg {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .bannerImg img {
+        height: 150px;
+    }
 }

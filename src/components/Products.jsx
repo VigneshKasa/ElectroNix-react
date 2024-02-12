@@ -679,6 +679,7 @@ function Products({ product }) {
       price: 92422,
     },
   ];
+  
   let arr = bestProductsArray;
 
   if (product === "best Products") {

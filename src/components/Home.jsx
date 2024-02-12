@@ -8,6 +8,7 @@ import HalfBanner from "./HalfBanner";
 import Companies from "./Companies";
 
 function Home() {
+  
   return (
     <>
       <div className={styles.mainbox}>

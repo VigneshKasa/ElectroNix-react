@@ -6,7 +6,6 @@ import { IoStar } from "react-icons/io5";
 
 
 function ProductPreview({setProductPreview ,arr}) {
- 
   return (
     <>
       <div className={styles.mainContainer}>

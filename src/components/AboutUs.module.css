@@ -36,7 +36,7 @@
 
 .aboutContainer{
     display: flex;
-    height:550px;
+    height:590px;
     margin-bottom:30px;
     border-radius: 25px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -75,7 +75,7 @@
     width:50%;    
 }
 .aboutCoverImage img{
-    height:400px;
+    height:350px;
     border-radius:25px;
 }
 
@@ -98,7 +98,7 @@
     .aboutContainer{
         display: flex;
         flex-direction: column;
-        height:550px;
+        height:auto;
         margin-bottom:30px;
         border-radius: 25px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -140,6 +140,74 @@
     }
     .aboutCoverImage img{
         height:200px;
+        border-radius:25px;
+    }
+    
+}
+
+@media only screen and ((max-width:1000px) and (min-width:601px)){
+    .about {
+        margin-top:100px;
+        display: flex;
+        padding-left: 0px;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #dcdcdc;
+        margin-bottom:30px;
+    
+    }
+    
+    .aboutContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:auto;
+        margin-bottom:30px;
+        border-radius: 25px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    
+    .aboutinfoContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width:80%;
+        padding:10px;
+        border-top-left-radius:25px;
+        border-bottom-left-radius:25px;
+    }
+    .aboutWelcome{
+        padding-top:30px;
+        color:#EB642B;
+        /* color: #0886e0;  */
+        font-size:25px;
+    }
+    .aboutTitle{
+        margin-top:20px;
+        font-weight: 900;  
+        font-size:40px;
+    }
+    .aboutInfo{
+        margin-top:20px;
+        text-align: justify;
+        font-size:15px;
+    }
+    .aboutCoverImage{
+        border-top-right-radius:25px;
+        border-bottom-right-radius:25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;    
+    }
+    .aboutCoverImage img{
+        height:25 0px;
         border-radius:25px;
     }
     
