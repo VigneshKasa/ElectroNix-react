@@ -20,7 +20,6 @@ let prices=0
 for(let i=0;i<bestProductsArray.length;i++){
 prices=prices + bestProductsArray[i].price
 }
-console.log(prices)
   let subtotal = quantity * prices;
 
   let tax = (subtotal / 100) * 8;
@@ -47,7 +46,7 @@ console.log(prices)
               </div>
               <div className={styles.productContainer}>
                 {bestProductsArray.map((items) => (
-                  <div className={styles.productItems}>
+                  <div key={items.item} className={styles.productItems}>
                     <div className={styles.productImage}>
                       <img src={items.img} alt="" />
                     </div>

@@ -12,36 +12,40 @@ import { useState } from "react";
 import style from "./Products.module.css";
 import { LiaRupeeSignSolid } from "react-icons/lia";
 import ProductPreview from "./ProductPreview";
+import { useContext } from "react";
+import { ProductDetails } from "../store/ProductDetails";
 
-function Store({bestProductsArray,mobileArray,laptopArray,tvArray,earphonesArray,gamingArray,cameraArray}) {
+// function Store({bestProductsArray,mobileArray,laptopArray,tvArray,earphonesArray,gamingArray,cameraArray}) {
+function Store() {
   const [addToCart, setAddToCart] = useState("Add to cart");
   const [productPreview, setProductPreview] = useState("hide");
   const [product, setProduct] = useState("best Products");
 
-  let arr = bestProductsArray;
-
+  const arr = useContext(ProductDetails);
+  console.log(arr)
+  let newArr=[]
   if (product === "best Products") {
-    arr = [...bestProductsArray];
+    newArr=arr[0].filter( (n)=>n.rating >= 4.5) ;
   }
   if (product === "mobiles") {
-    arr = [...mobileArray];
+    newArr=arr[0].filter( (n)=>n.type === 'mobile') ;
   }
   if (product === "laptops") {
-    arr = [...laptopArray];
+    newArr=arr[0].filter( (n)=>n.type === 'laptop') ;
   }
   if (product === "tv") {
-    arr = [...tvArray];
+    newArr=arr[0].filter( (n)=>n.type === 'tv') ;
   }
   if (product === "earphones") {
-    arr = [...earphonesArray];
+    newArr=arr[0].filter( (n)=>n.type === 'earphones') ;
   }
   if (product === "gaming") {
-    arr = gamingArray;
+    newArr=arr[0].filter( (n)=>n.type === 'gaming') ;
   }
   if (product === "cameras") {
-    arr = [...cameraArray];
+    newArr=arr[0].filter( (n)=>n.type === 'camera') ;
+    console.log(newArr)
   }
-
 
   return (
     <>
@@ -132,12 +136,12 @@ function Store({bestProductsArray,mobileArray,laptopArray,tvArray,earphonesArray
                 </p>
               </div>
               <div className={style.productBox}>
-                {arr.map((items) => (
-                  <div key ={items.item} className={style.products}>
-                    {console.log(items.item)}
+                {newArr.map((items) => (
+                  <div className={style.products}>
+                    {/* {console.log(items.item)} */}
                     <div
                       className={style.productImg}
-                      onClick={() => (setProductPreview("show"),itemData(items.img,items.brand,items.type,items.item,items.rating,items.customers,items.price))}
+                      onClick={() => setProductPreview("show")}
                     >
                       <img src={items.img} alt="" />
                     </div>
