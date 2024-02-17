@@ -3,7 +3,7 @@ import { LiaRupeeSignSolid } from "react-icons/lia";
 import { MdDeleteForever } from "react-icons/md";
 import { useState } from "react";
 
-function Cart({bestProductsArray,mobileArray,laptopArray,tvArray,earphonesArray,gamingArray,cameraArray}) {
+function Cart() {
   let shipping = 0;
 
   function inc() {
@@ -15,7 +15,155 @@ function Cart({bestProductsArray,mobileArray,laptopArray,tvArray,earphonesArray,
   }
 
   const [quantity, setQuantity] = useState(1);
+  const bestProductsArray = [
+    {
+      img: "/images/bestProducts/macbook.jpg",
+      type: "laptop",
+      brand: "Apple",
+      item: "Macbook air M1",
+      rating: 4.8,
+      customers: 1218,
+      price: 89999,
+    },
+    {
+      img: "/images/bestProducts/airpods.png",
+      type: "earphones",
+      brand: "Apple",
+      item: "Airpods Pro 2 Gen",
+      rating: 4,
+      customers: 1422,
+      price: 24900,
+    },
+    {
+      img: "/images/bestProducts/iphone15.jpg",
+      type: "mobile",
+      brand: "Apple",
+      item: "Iphone 15 pro",
+      rating: 4.9,
+      customers: 1597,
+      price: 130999,
+    },
 
+    {
+      img: "/images/bestProducts/redmitv.jpg",
+      type: "tv",
+      brand: "redmi",
+      item: "Redmi Fire TV",
+      rating: 4.7,
+      customers: 5029,
+      price: 28999,
+    },
+    {
+      img: "/images/bestProducts/bose1.png",
+      type: "earphones",
+      brand: "Bose",
+      item: "Earphones Buds II",
+      rating: 4,
+      customers: 1205,
+      price: 20499,
+    },
+    {
+      img: "/images/bestProducts/samsungs24s.png",
+      type: "mobile",
+      brand: "Samsung",
+      item: "Samsung S24 Ultra",
+      rating: 4.9,
+      customers: 1597,
+      price: 136999,
+    },
+
+    {
+      img: "/images/bestProducts/sonycamera.png",
+      type: "tv",
+      brand: "Sony",
+      item: "Sony EOS 700",
+      rating: 4.3,
+      customers: 2322,
+      price: 59422,
+    },
+    {
+      img: "/images/bestProducts/xbox series.jpg",
+      type: "gaming",
+      brand: "xbox",
+      item: "Xbox Series S",
+      rating: 4,
+      customers: 1042,
+      price: 24999,
+    },
+    {
+      img: "/images/bestProducts/ipad.png",
+      type: "mobile",
+      brand: "Apple",
+      item: "Ipad",
+      rating: 4.8,
+      customers: 1218,
+      price: 89999,
+    },
+    {
+      img: "/images/bestProducts/lenovoideapad1.jpg",
+      type: "laptop",
+      brand: "Lenovo",
+      item: "Lenovo ideapad 1",
+      rating: 4,
+      customers: 1422,
+      price: 24900,
+    },
+    {
+      img: "/images/bestProducts/iphone14.jpg",
+      type: "mobile",
+      brand: "Apple",
+      item: "Iphone 14 pro",
+      rating: 4.2,
+      customers: 7089,
+      price: 90999,
+    },
+    {
+      img: "/images/bestProducts/xiamipad.jpg",
+      type: "mobile",
+      brand: "Xiami",
+      item: "Xiami Pad 5",
+      rating: 4,
+      customers: 5710,
+      price: 24999,
+    },
+
+    {
+      img: "/images/bestProducts/canoncamera.png",
+      type: "camera",
+      brand: "Canon",
+      item: "Canon EOS R10",
+      rating: 4,
+      customers: 1286,
+      price: 81499,
+    },
+    {
+      img: "/images/bestProducts/nintendoswitch.jpg",
+      type: "gaming",
+      brand: "Nintendo",
+      item: "Nintendo Switch OLED",
+      rating: 4.2,
+      customers: 1022,
+      price: 29999,
+    },
+    {
+      img: "/images/bestProducts/sonybravia.webp",
+      type: "tv",
+      brand: "Sony",
+      item: "Sony Bravia X",
+      rating: 4.3,
+      customers: 2322,
+      price: 59422,
+    },
+    {
+      img: "/images/bestProducts/miearphones.png",
+      type: "earphones",
+      brand: "xiaomi",
+      item: "Earphones Basic",
+      rating: 4.7,
+      customers: 7717,
+      price: 499,
+    },
+  ];
 let prices=0
 for(let i=0;i<bestProductsArray.length;i++){
 prices=prices + bestProductsArray[i].price
@@ -29,7 +177,6 @@ prices=prices + bestProductsArray[i].price
   if (subtotal > 10000) {
     shipping = 59;
   }
-
   return (
     <>
       <div className={styles.mainbox}>
