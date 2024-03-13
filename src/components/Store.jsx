@@ -22,30 +22,31 @@ function Store() {
   const [product, setProduct] = useState("best Products");
 
   const arr = useContext(ProductDetails);
-  console.log(arr)
-  let newArr=[]
+  let newArr = [];
   if (product === "best Products") {
-    newArr=arr[0].filter( (n)=>n.rating >= 4.5) ;
+    newArr = arr[0].filter((n) => n.rating >= 4.5);
   }
   if (product === "mobiles") {
-    newArr=arr[0].filter( (n)=>n.type === 'mobile') ;
+    newArr = arr[0].filter((n) => n.type === "mobile");
   }
   if (product === "laptops") {
-    newArr=arr[0].filter( (n)=>n.type === 'laptop') ;
+    newArr = arr[0].filter((n) => n.type === "laptop");
   }
   if (product === "tv") {
-    newArr=arr[0].filter( (n)=>n.type === 'tv') ;
+    newArr = arr[0].filter((n) => n.type === "tv");
   }
   if (product === "earphones") {
-    newArr=arr[0].filter( (n)=>n.type === 'earphones') ;
+    newArr = arr[0].filter((n) => n.type === "earphones");
   }
   if (product === "gaming") {
-    newArr=arr[0].filter( (n)=>n.type === 'gaming') ;
+    newArr = arr[0].filter((n) => n.type === "gaming");
   }
   if (product === "cameras") {
-    newArr=arr[0].filter( (n)=>n.type === 'camera') ;
-    console.log(newArr)
+    newArr = arr[0].filter((n) => n.type === "camera");
   }
+function setProductId(productId){
+    return productId;
+  };
 
   return (
     <>
@@ -137,11 +138,10 @@ function Store() {
               </div>
               <div className={style.productBox}>
                 {newArr.map((items) => (
-                  <div className={style.products}>
-                    {/* {console.log(items.item)} */}
+                  <div className={style.products} key={items.productId}>
                     <div
                       className={style.productImg}
-                      onClick={() => setProductPreview("show")}
+                      onClick={() =>{setProductPreview("show"),setProductId(items.productId)}}
                     >
                       <img src={items.img} alt="" />
                     </div>
@@ -181,7 +181,8 @@ function Store() {
               </div>
             </div>
           ) : (
-            <ProductPreview setProductPreview={setProductPreview} arr={arr} />
+            <ProductPreview
+              setProductPreview={setProductPreview} productId={7}/>
           )}
           <HalfBanner />
           <Companies></Companies>

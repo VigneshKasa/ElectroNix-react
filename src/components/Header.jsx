@@ -6,7 +6,7 @@ import { FaStoreAlt } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
 import { MdContactPage } from "react-icons/md";
 import { IoLogIn } from "react-icons/io5";
-
+import {Link} from "react-router-dom"
 
 
 function Header({SelectedTab,setSelectedTab}) {
@@ -14,45 +14,59 @@ function Header({SelectedTab,setSelectedTab}) {
   return (
     <>
       <div className={styles.navbar }>
+        <Link to="/">
         <div className={styles.logo}>
-          <img src={logo} alt="electronix" onClick={()=>setSelectedTab("Home")}/>
+          <img src={logo} alt="electronix"/>
         </div>
+        </Link>
         <div className={styles.navlist}>
           <ul>
           <li>
-            <div className={SelectedTab==="Home"?styles.active:styles.navItemContainer} onClick={()=>setSelectedTab("Home")} >
+            <Link to="/">
+            <div className={styles.navItemContainer} >
             <div className={styles.navItemIcon}><FaHome /></div>
               <div className={styles.navItemName}>Home</div>
             </div>
+            </Link>
             </li>
             <li>
-            <div className={SelectedTab==="Store"?styles.active:styles.navItemContainer} onClick={()=>setSelectedTab("Store")} >
+              <Link to="/Store"> 
+            <div className={styles.navItemContainer} >
             <div className={styles.navItemIcon}><FaStoreAlt/></div>
               <div className={styles.navItemName}>Store</div>
             </div>
+            </Link>
             </li>
             <li>
-            <div className={SelectedTab==="About Us"?styles.active:styles.navItemContainer}onClick={()=>setSelectedTab("About Us")} >
+            <Link to="/About"> 
+            <div className={styles.navItemContainer} >
             <div className={styles.navItemIcon}><IoIosPeople/></div>
               <div className={styles.navItemName} >About Us</div>
             </div>
+            </Link>
             </li>
             <li>
-            <div className={SelectedTab==="Contact Us"?styles.active:styles.navItemContainer}onClick={()=>setSelectedTab("Contact Us")} >
+            <Link to="/Contact"> 
+            <div className={styles.navItemContainer} >
             <div className={styles.navItemIcon}><MdContactPage/></div>
               <div className={styles.navItemName} >Contact Us</div>
             </div>
+            </Link> 
             </li>
           </ul>
         </div>
         <div className={styles.cart}>
-          <div className={SelectedTab==="Login"?styles.active:styles.navItemContainer} onClick={()=>setSelectedTab("Login")} >
+        <Link to="/Login"> 
+        <div className={styles.navItemContainer} >
             <div className={styles.navItemIcon}><IoLogIn/></div>
           <div className={styles.login}>Login</div>
           </div>
-          <div className={SelectedTab==="Login"?styles.active:styles.navItemContainer} onClick={()=>setSelectedTab("Cart")} >
+          </Link>
+          <Link to="/Cart"> 
+          <div className={styles.navItemContainer} >
           <div className={styles.carticon}><div className={styles.cartValue} >7</div><RiShoppingCart2Line /></div>
         </div>
+        </Link> 
         </div>
       </div>
     </>

@@ -261,7 +261,7 @@ prices=prices + bestProductsArray[i].price
                 <div className={styles.summaryInfo}>ESTIMATED TOTAL</div>
                 <div className={styles.summaryInfoNumber}>
                   <LiaRupeeSignSolid />
-                  {shipping + tax + subtotal}
+                  {(shipping + tax + subtotal).toFixed(2)}
                 </div>
               </div>
               <div className={styles.checkoutButtonContainer}>
