@@ -6,10 +6,10 @@ import { FaStoreAlt } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
 import { MdContactPage } from "react-icons/md";
 import { IoLogIn } from "react-icons/io5";
-import {Link} from "react-router-dom"
+import {Link,NavLink} from "react-router-dom"
 
 
-function Header({SelectedTab,setSelectedTab}) {
+function Header() {
   
   return (
     <>
@@ -22,47 +22,47 @@ function Header({SelectedTab,setSelectedTab}) {
         <div className={styles.navlist}>
           <ul>
           <li>
-            <Link to="/">
+            <NavLink to="/" className={({isActive}) => (isActive ? styles.active : styles.notActive)}>
             <div className={styles.navItemContainer} >
             <div className={styles.navItemIcon}><FaHome /></div>
               <div className={styles.navItemName}>Home</div>
             </div>
-            </Link>
+            </NavLink>
             </li>
             <li>
-              <Link to="/Store"> 
+            <NavLink to="/Store" className={({isActive}) => (isActive ? styles.active : styles.notActive)}>
             <div className={styles.navItemContainer} >
             <div className={styles.navItemIcon}><FaStoreAlt/></div>
               <div className={styles.navItemName}>Store</div>
             </div>
-            </Link>
+            </NavLink>
             </li>
             <li>
-            <Link to="/About"> 
+            <NavLink to="/About" className={({isActive}) => (isActive ? styles.active : styles.notActive)}>
             <div className={styles.navItemContainer} >
             <div className={styles.navItemIcon}><IoIosPeople/></div>
               <div className={styles.navItemName} >About Us</div>
             </div>
-            </Link>
+            </NavLink>
             </li>
             <li>
-            <Link to="/Contact"> 
+            <NavLink to="/Contact" className={({isActive}) => (isActive ? styles.active : styles.notActive)}>
             <div className={styles.navItemContainer} >
             <div className={styles.navItemIcon}><MdContactPage/></div>
               <div className={styles.navItemName} >Contact Us</div>
             </div>
-            </Link> 
+            </NavLink> 
             </li>
           </ul>
         </div>
         <div className={styles.cart}>
-        <Link to="/Login"> 
+        <NavLink to="/Login" className={({isActive}) => (isActive ? styles.active : styles.notActive)}> 
         <div className={styles.navItemContainer} >
             <div className={styles.navItemIcon}><IoLogIn/></div>
           <div className={styles.login}>Login</div>
           </div>
-          </Link>
-          <Link to="/Cart"> 
+          </NavLink>
+          <Link to="/Cart" className={({isActive}) => (isActive ? styles.active : styles.notActive)}> 
           <div className={styles.navItemContainer} >
           <div className={styles.carticon}><div className={styles.cartValue} >7</div><RiShoppingCart2Line /></div>
         </div>

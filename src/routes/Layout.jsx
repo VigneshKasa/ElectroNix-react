@@ -1,10 +1,10 @@
 import "./Layout.css";
-
 import React from 'react'
 import Header from '../components/Header'
 import { Outlet } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { ProductDetails } from "../store/ProductDetails";
+import ScrollToTop from "../components/ScrollToTop";
 function Layout() {
   const allItems = [
     {
@@ -730,6 +730,7 @@ function Layout() {
   ];
   return (
     <>
+    <ScrollToTop/>
 <ProductDetails.Provider value={[allItems]}>
 <Header></Header>
 <Outlet/>

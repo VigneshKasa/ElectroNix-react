@@ -55,7 +55,7 @@ li {
     align-items: center;
 }
 
-.active {
+.active{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -63,7 +63,14 @@ li {
     color: #EB642B;
     font-weight: 600;
 }
-
+.notActive{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #7d7d7d;
+    font-weight: 600;
+}
 .cart {
     display: flex;
     justify-content: center;
