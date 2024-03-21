@@ -20,33 +20,36 @@ function Store() {
   const [addToCart, setAddToCart] = useState("Add to cart");
   const [productPreview, setProductPreview] = useState("hide");
   const [product, setProduct] = useState("best Products");
+ 
+  const {setProductId}=useContext(ProductDetails)
 
-  const arr = useContext(ProductDetails);
+  function productIdHolder(key){
+    setProductId(key)
+  }
+
+  const {allItems} = useContext(ProductDetails);
   let newArr = [];
   if (product === "best Products") {
-    newArr = arr[0].filter((n) => n.rating >= 4.5);
+    newArr = allItems.filter((n) => n.rating >= 4.5);
   }
   if (product === "mobiles") {
-    newArr = arr[0].filter((n) => n.type === "mobile");
+    newArr = allItems.filter((n) => n.type === "mobile");
   }
   if (product === "laptops") {
-    newArr = arr[0].filter((n) => n.type === "laptop");
+    newArr = allItems.filter((n) => n.type === "laptop");
   }
   if (product === "tv") {
-    newArr = arr[0].filter((n) => n.type === "tv");
+    newArr = allItems.filter((n) => n.type === "tv");
   }
   if (product === "earphones") {
-    newArr = arr[0].filter((n) => n.type === "earphones");
+    newArr = allItems.filter((n) => n.type === "earphones");
   }
   if (product === "gaming") {
-    newArr = arr[0].filter((n) => n.type === "gaming");
+    newArr = allItems.filter((n) => n.type === "gaming");
   }
   if (product === "cameras") {
-    newArr = arr[0].filter((n) => n.type === "camera");
+    newArr = allItems.filter((n) => n.type === "camera");
   }
-function setProductId(productId){
-    return productId;
-  };
 
   return (
     <>
@@ -141,7 +144,7 @@ function setProductId(productId){
                   <div className={style.products} key={items.productId}>
                     <div
                       className={style.productImg}
-                      onClick={() =>{setProductPreview("show"),setProductId(items.productId)}}
+                      onClick={() =>{{setProductPreview("show"),productIdHolder(items.productId)}}}
                     >
                       <img src={items.img} alt="" />
                     </div>
@@ -182,7 +185,7 @@ function setProductId(productId){
             </div>
           ) : (
             <ProductPreview
-              setProductPreview={setProductPreview} productId={7}/>
+              setProductPreview={setProductPreview}/>
           )}
           <HalfBanner />
           <Companies></Companies>

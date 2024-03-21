@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { ProductDetails } from "../store/ProductDetails";
 import ScrollToTop from "../components/ScrollToTop";
+import { useState } from "react";
 function Layout() {
   const allItems = [
     {
@@ -728,10 +729,11 @@ function Layout() {
       productId: 71,
     },
   ];
+  const [productId,setProductId]=useState(0);
   return (
     <>
     <ScrollToTop/>
-<ProductDetails.Provider value={[allItems]}>
+<ProductDetails.Provider value={{ allItems ,productId,setProductId}}>
 <Header></Header>
 <Outlet/>
 <Footer></Footer>

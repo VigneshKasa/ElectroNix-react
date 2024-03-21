@@ -5,20 +5,22 @@ import Service from "./Service";
 import { IoStar } from "react-icons/io5";
 import { useContext } from "react";
 import { ProductDetails } from "../store/ProductDetails";
+import ScrollToTop from "./ScrollToTop";
 
-function ProductPreview({ setProductPreview, productId }) {
-  let array = useContext(ProductDetails);
-  let arr=array[0]
+function ProductPreview({setProductPreview}) {
+  let {allItems} = useContext(ProductDetails);
+  const {productId}=useContext(ProductDetails)
   let obj = {};
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].productId == productId){
-       obj=arr[i]   
+  for (let i = 0; i < allItems.length; i++) {
+    if (allItems[i].productId == productId){
+       obj=allItems[i]   
        break;
     }
   }
 
   return (
     <>
+    <ScrollToTop />
       <div className={styles.mainContainer}>
         <div className={styles.mainbox}>
           <div className={styles.imageContainer}>

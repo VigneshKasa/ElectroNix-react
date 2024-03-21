@@ -14,7 +14,7 @@ function ContactUs() {
           <div className={styles.contactContainer}>
             <div className={styles.contactFormContainer}>
               <div className={styles.contactTitle}>
-                <b>Let us know</b>
+                <p>Let us know</p>
               </div>
               <div className={styles.contactCaption}>Convey Your Thoughts</div>
               <div className={styles.nameInput}>
