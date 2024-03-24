@@ -22,6 +22,8 @@ function Store() {
   const [product, setProduct] = useState("best Products");
  
   const {setProductId}=useContext(ProductDetails)
+ const {cartList}=useContext(ProductDetails)
+ console.log(cartList)
 
   function productIdHolder(key){
     setProductId(key)

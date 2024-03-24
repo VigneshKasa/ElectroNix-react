@@ -5,7 +5,6 @@ import ps5 from "/images/logos/ps5logo.png";
 import samsung from "/images/logos/samsunglogo.png";
 import dell from "/images/logos/delllogo.png";
 import intel from "/images/logos/intellogo.png";
-import lg from "/images/logos/lglogo.png";
 import canon from "/images/logos/canonlogo.png";
 
 function Companies() {

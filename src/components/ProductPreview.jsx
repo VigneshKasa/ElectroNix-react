@@ -6,21 +6,27 @@ import { IoStar } from "react-icons/io5";
 import { useContext } from "react";
 import { ProductDetails } from "../store/ProductDetails";
 import ScrollToTop from "./ScrollToTop";
-
-function ProductPreview({setProductPreview}) {
-  let {allItems} = useContext(ProductDetails);
-  const {productId}=useContext(ProductDetails)
+function ProductPreview({ setProductPreview }) {
+  let { allItems } = useContext(ProductDetails);
+  let { cartItems } = useContext(ProductDetails);
+  let { setCartItems } = useContext(ProductDetails);
+  const { productId } = useContext(ProductDetails);
   let obj = {};
   for (let i = 0; i < allItems.length; i++) {
-    if (allItems[i].productId == productId){
-       obj=allItems[i]   
-       break;
+    if (allItems[i].productId == productId) {
+      obj = allItems[i];
+      break;
     }
+  }
+
+  function addToCart(obj) {
+    setCartItems([obj, ...cartItems]);
+    console.log(cartItems);
   }
 
   return (
     <>
-    <ScrollToTop />
+      <ScrollToTop />
       <div className={styles.mainContainer}>
         <div className={styles.mainbox}>
           <div className={styles.imageContainer}>
@@ -29,7 +35,9 @@ function ProductPreview({setProductPreview}) {
           <div className={styles.descriptionContainer}>
             <div className={styles.titleBar}>
               <div className={styles.productBrandContainer}>
-                <div className={styles.productBrand}>{obj.brand}</div>
+                <div className={styles.productBrand}>
+                  {obj.brand.toUpperCase()}
+                </div>
                 <div className={styles.productType}>{obj.type}</div>
               </div>
               <div
@@ -60,7 +68,13 @@ function ProductPreview({setProductPreview}) {
                 {obj.price}{" "}
                 <span className={styles.offerPercentage}> 20% OFF</span>
               </p>
-              <div className={styles.addButton}>Add to Cart</div>
+              {(cartItems.includes(obj)) && <div className={styles.AddedButton}>Already added</div>}
+              <div
+                className={styles.addButton}
+                onClick={() => addToCart(obj)}
+              >
+                Add to Cart
+              </div>
             </div>
           </div>
         </div>

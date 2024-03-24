@@ -115,7 +115,18 @@
     cursor: pointer;
     transform: scale(1.05)
 }
+.AddedButton {
+    background-color: #0886e0;
+    font-size: 20px;
+    padding: 10px 10px;
+    border-radius: 15px;
+}
 
+.AddedButton:hover {
+    transition: 300ms;
+    cursor: pointer;
+    transform: scale(1.05)
+}
 .links:hover {
     color: #717171;
 }

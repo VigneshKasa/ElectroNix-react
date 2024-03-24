@@ -121,8 +121,8 @@ function Layout() {
     {
       img: "/images/bestProducts/xiamipad.jpg",
       type: "mobile",
-      brand: "Xiami",
-      item: "Xiami Pad 5",
+      brand: "Xiaomi",
+      item: "Xiamoi Pad 5",
       rating: 4,
       customers: 5710,
       price: 24999,
@@ -730,10 +730,12 @@ function Layout() {
     },
   ];
   const [productId,setProductId]=useState(0);
+let [cartItems,setCartItems]=useState([]);
+
   return (
     <>
     <ScrollToTop/>
-<ProductDetails.Provider value={{ allItems ,productId,setProductId}}>
+<ProductDetails.Provider value={{ allItems ,productId,setProductId,cartItems,setCartItems}}>
 <Header></Header>
 <Outlet/>
 <Footer></Footer>

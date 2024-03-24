@@ -7,10 +7,12 @@ import { IoIosPeople } from "react-icons/io";
 import { MdContactPage } from "react-icons/md";
 import { IoLogIn } from "react-icons/io5";
 import {Link,NavLink} from "react-router-dom"
+import { useContext } from "react";
+import { ProductDetails } from "../store/ProductDetails";
 
 
 function Header() {
-  
+  const {cartItems}=useContext(ProductDetails)
   return (
     <>
       <div className={styles.navbar }>
@@ -64,7 +66,7 @@ function Header() {
           </NavLink>
           <Link to="/Cart" className={({isActive}) => (isActive ? styles.active : styles.notActive)}> 
           <div className={styles.navItemContainer} >
-          <div className={styles.carticon}><div className={styles.cartValue} >7</div><RiShoppingCart2Line /></div>
+          <div className={styles.carticon}><div className={styles.cartValue} >{cartItems.length}</div><RiShoppingCart2Line /></div>
         </div>
         </Link> 
         </div>
