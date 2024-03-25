@@ -17,7 +17,6 @@ import { ProductDetails } from "../store/ProductDetails";
 
 // function Store({bestProductsArray,mobileArray,laptopArray,tvArray,earphonesArray,gamingArray,cameraArray}) {
 function Store() {
-  const [addToCart, setAddToCart] = useState("Add to cart");
   const [productPreview, setProductPreview] = useState("hide");
   const [product, setProduct] = useState("best Products");
  
@@ -53,11 +52,18 @@ function Store() {
     newArr = allItems.filter((n) => n.type === "camera");
   }
 
+  const {cartItems}=useContext(ProductDetails)
+  const {setCartItems}=useContext(ProductDetails)
+
+  function addToCart(obj) {
+    setCartItems([obj, ...cartItems]);
+  }
+
   return (
     <>
       <div className={styles.mainbox}>
-        <div className={styles.nav}>
-          <ul>
+        <div className={styles.nav}  >
+          <ul onClick={() => setProductPreview("hide")}>
             <li>
               <div
                 className={
@@ -130,7 +136,7 @@ function Store() {
         </div>
         <div className={styles.store}>STORE</div>
         <div className={styles.title}>Recommended Electronics and Gadgets</div>
-        <div className={styles.homeContainer}>
+        <div className={styles.homeContainer} >
           {productPreview === "hide" ? (
             <div className={style.ProductsContainer}>
               <div className={style.ProductsText}>
@@ -170,14 +176,10 @@ function Store() {
                         </div>
                         <div
                           key={items.item}
-                          className={
-                            addToCart === "Add to cart"
-                              ? style.addButton
-                              : style.added
-                          }
-                          onClick={() => setAddToCart("Added to cart")}
+                          className={style.addButton}
+                          onClick={()=>addToCart(items)}
                         >
-                          {addToCart}
+                          Add to Cart
                         </div>
                       </div>
                     </div>

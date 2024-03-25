@@ -12,6 +12,7 @@ function ProductPreview({ setProductPreview }) {
   let { setCartItems } = useContext(ProductDetails);
   const { productId } = useContext(ProductDetails);
   let obj = {};
+  //fetching the item from the product Array for preview
   for (let i = 0; i < allItems.length; i++) {
     if (allItems[i].productId == productId) {
       obj = allItems[i];
@@ -20,7 +21,9 @@ function ProductPreview({ setProductPreview }) {
   }
 
   function addToCart(obj) {
+    
     setCartItems([obj, ...cartItems]);
+    
     console.log(cartItems);
   }
 
