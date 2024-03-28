@@ -377,9 +377,9 @@
         cursor: pointer;
     }
     .added {
-        width: 60px;
-        height: 25px;
-        font-size: 7px;
+        width:  80px;
+        height: 35px;
+        font-size: 10px;
         border-radius: 10px;
     }
 }

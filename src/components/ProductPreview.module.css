@@ -250,7 +250,9 @@
         cursor: pointer;
         transform: scale(1.05)
     }
-    
+    .AddedButton {
+        font-size:9px;
+    }
     .links:hover {
         color: #717171;
     }
@@ -368,7 +370,10 @@
     cursor: pointer;
     transform: scale(1.05)
 }
-
+.AddedButton {
+    font-size: 13px;
+    padding: 10px 5px;
+}
 .links:hover {
     color: #717171;
 }
@@ -480,7 +485,10 @@
         padding: 10px 5px;
         border-radius: 15px;
     }
-    
+    .AddedButton{
+        font-size: 15px;
+        padding: 10px 5px;
+    }
     .addButton:hover {
         transition: 300ms;
         cursor: pointer;
