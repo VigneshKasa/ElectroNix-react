@@ -1,4 +1,5 @@
 import styles from "./HalfBanner.module.css";
+import {Link} from "react-router-dom"
 function HalfBanner() {
   return (
     <>
@@ -8,7 +9,7 @@ function HalfBanner() {
             <div className={styles.bannerTitle1}>Sony</div>
             <div className={styles.bannerTitle2}>Gaming console</div>
             <div className={styles.bannerDescription}>PS5 PRO</div>
-            <div className={styles.bannerButoon}>Buy Now</div>
+            <Link to="/Store" ><div className={styles.bannerButoon}>Explore</div></Link>
           </div>
           <div className={styles.bannerImg}>
             <img src="/images/ps5console.webp" alt="" />

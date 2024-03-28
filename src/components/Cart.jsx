@@ -8,21 +8,31 @@ import { useContext } from "react";
 function Cart() {
   let shipping = 0;
 
-  function inc() {
-    setQuantity(quantity + 1);
+  function inc(item) {
+    const updatedCartItems = cartItems.map((cartItem) =>
+      cartItem.productId === item.productId
+        ? { ...cartItem, quantity: cartItem.quantity + 1 }
+        : cartItem
+    );
+    setCartItems(updatedCartItems);
   }
 
-  function dec() {
-    if (quantity > 1) setQuantity(quantity - 1);
+  function dec(item) {
+    const updatedCartItems = cartItems.map((cartItem) =>
+      cartItem.productId === item.productId && item.quantity > 1
+        ? { ...cartItem, quantity: cartItem.quantity - 1 }
+        : cartItem
+    );
+    setCartItems(updatedCartItems);
   }
-  const {cartItems}=useContext(ProductDetails)
-  const [quantity, setQuantity] = useState(1);
+
+  const { cartItems } = useContext(ProductDetails);
   let prices = 0;
   for (let i = 0; i < cartItems.length; i++) {
     prices = prices + cartItems[i].price;
   }
-  let subtotal = quantity * prices;
-
+  let subtotal = 0;
+  cartItems.map((i) => (subtotal = subtotal + i.price * i.quantity));
   let tax = (subtotal / 100) * 8;
   if (subtotal > 0) {
     shipping = 99;
@@ -38,11 +48,11 @@ function Cart() {
     setPromo(true);
   };
 
-  const {setCartItems}=useContext(ProductDetails)
-  
-  function removeItem(items){
-    let newArr=cartItems.filter((i)=>i!==items)
-    setCartItems(newArr)
+  const { setCartItems } = useContext(ProductDetails);
+
+  function removeItem(items) {
+    let newArr = cartItems.filter((i) => i !== items);
+    setCartItems(newArr);
   }
 
   return (
@@ -59,6 +69,9 @@ function Cart() {
                 <div className={styles.productList}>Price</div>
                 <div className={styles.productList}>Remove</div>
               </div>
+              {cartItems.length == 0 && (
+                <p className={styles.noProduct}>Buy more Pay less</p>
+              )}
               <div className={styles.productContainer}>
                 {cartItems.map((items) => (
                   <div key={items.item} className={styles.productItems}>
@@ -71,11 +84,17 @@ function Cart() {
                       <div className={styles.productName}>{items.item}</div>
                     </div>
                     <div className={styles.productQuantityConainer}>
-                      <div className={styles.quantButtons} onClick={dec}>
+                      <div
+                        className={styles.quantButtons}
+                        onClick={() => dec(items)}
+                      >
                         -
                       </div>
-                      <div className={styles.display}>{quantity}</div>
-                      <div className={styles.quantButtons} onClick={inc}>
+                      <div className={styles.display}>{items.quantity}</div>
+                      <div
+                        className={styles.quantButtons}
+                        onClick={() => inc(items)}
+                      >
                         +
                       </div>
                     </div>
@@ -83,7 +102,10 @@ function Cart() {
                       <LiaRupeeSignSolid />
                       {items.price}
                     </div>
-                    <div className={styles.productRemove} onClick={()=>removeItem(items)}>
+                    <div
+                      className={styles.productRemove}
+                      onClick={() => removeItem(items)}
+                    >
                       <MdDeleteForever />
                     </div>
                   </div>

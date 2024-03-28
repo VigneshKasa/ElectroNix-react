@@ -10,7 +10,7 @@ function ProductPreview({ setProductPreview }) {
   let { allItems } = useContext(ProductDetails);
   let { cartItems } = useContext(ProductDetails);
   let { setCartItems } = useContext(ProductDetails);
-  const { productId } = useContext(ProductDetails);
+  let {productId } = useContext(ProductDetails);
   let obj = {};
   //fetching the item from the product Array for preview
   for (let i = 0; i < allItems.length; i++) {
@@ -18,15 +18,17 @@ function ProductPreview({ setProductPreview }) {
       obj = allItems[i];
       break;
     }
-  }
-
+}
   function addToCart(obj) {
-    
     setCartItems([obj, ...cartItems]);
-    
-    console.log(cartItems);
   }
+let isPresent=false;
 
+  cartItems.forEach(items => {
+    if(items.productId==obj.productId){
+      isPresent=true
+    }
+  });
   return (
     <>
       <ScrollToTop />
@@ -71,13 +73,16 @@ function ProductPreview({ setProductPreview }) {
                 {obj.price}{" "}
                 <span className={styles.offerPercentage}> 20% OFF</span>
               </p>
-              {(cartItems.includes(obj)) && <div className={styles.AddedButton}>Already added</div>}
-              <div
-                className={styles.addButton}
-                onClick={() => addToCart(obj)}
-              >
-                Add to Cart
-              </div>
+              {isPresent == true ? (
+                <div className={styles.AddedButton}>Item added</div>
+              ) : (
+                <div
+                  className={styles.addButton}
+                  onClick={() => addToCart(obj)}
+                >
+                  Add to Cart
+                </div>
+              )}
             </div>
           </div>
         </div>

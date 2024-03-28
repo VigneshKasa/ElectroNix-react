@@ -1,4 +1,5 @@
 import styles from "./BannerBox1.module.css";
+import {Link} from "react-router-dom";
 
 function BannerBox1() {
   return (
@@ -10,7 +11,7 @@ function BannerBox1() {
           <div className={styles.sqrbannerImg1}>
             <img src="/images/milaptop.png" alt="" />
           </div>
-          <div className={styles.sqrbannerButoon1}>Buy Now</div>
+          <Link to="/Store"><div className={styles.sqrbannerButoon1}>Explore</div></Link>
         </div>
         <div className={styles.squareBanner2}>
           <div className={styles.sqrbannerTitle2}> Tablet</div>
@@ -18,13 +19,13 @@ function BannerBox1() {
           <div className={styles.sqrbannerImg2}>
             <img src="/images/samsungtab.png" alt="" />
           </div>
-          <div className={styles.sqrbannerButoon2}>Buy Now</div>
+          <Link to="/Store" ><div className={styles.sqrbannerButoon2}>Explore</div></Link> 
         </div>
         <div className={styles.rectBanner}>
           <div className={styles.rectInfo}>
             <div className={styles.rectbannerDescription}>MOBILE</div>
             <div className={styles.rectbannerTitle}>IPHONE 15 PRO</div>
-            <div className={styles.rectbannerButoon}>Buy Now</div>
+            <Link to="/Store" ><div className={styles.rectbannerButoon}>Explore</div></Link>
           </div>
           <div className={styles.rectbannerImg}>
             <img src="/images/iphone15pro.png" alt="" />

@@ -19,16 +19,12 @@ import { ProductDetails } from "../store/ProductDetails";
 function Store() {
   const [productPreview, setProductPreview] = useState("hide");
   const [product, setProduct] = useState("best Products");
- 
-  const {setProductId}=useContext(ProductDetails)
- const {cartList}=useContext(ProductDetails)
- console.log(cartList)
-
-  function productIdHolder(key){
-    setProductId(key)
+  const { setProductId } = useContext(ProductDetails);
+  function productIdHolder(key) {
+    setProductId(key);
   }
 
-  const {allItems} = useContext(ProductDetails);
+  const { allItems } = useContext(ProductDetails);
   let newArr = [];
   if (product === "best Products") {
     newArr = allItems.filter((n) => n.rating >= 4.5);
@@ -52,8 +48,8 @@ function Store() {
     newArr = allItems.filter((n) => n.type === "camera");
   }
 
-  const {cartItems}=useContext(ProductDetails)
-  const {setCartItems}=useContext(ProductDetails)
+  const { cartItems } = useContext(ProductDetails);
+  const { setCartItems } = useContext(ProductDetails);
 
   function addToCart(obj) {
     setCartItems([obj, ...cartItems]);
@@ -62,7 +58,7 @@ function Store() {
   return (
     <>
       <div className={styles.mainbox}>
-        <div className={styles.nav}  >
+        <div className={styles.nav}>
           <ul onClick={() => setProductPreview("hide")}>
             <li>
               <div
@@ -136,7 +132,7 @@ function Store() {
         </div>
         <div className={styles.store}>STORE</div>
         <div className={styles.title}>Recommended Electronics and Gadgets</div>
-        <div className={styles.homeContainer} >
+        <div className={styles.homeContainer}>
           {productPreview === "hide" ? (
             <div className={style.ProductsContainer}>
               <div className={style.ProductsText}>
@@ -152,7 +148,12 @@ function Store() {
                   <div className={style.products} key={items.productId}>
                     <div
                       className={style.productImg}
-                      onClick={() =>{{setProductPreview("show"),productIdHolder(items.productId)}}}
+                      onClick={() => {
+                        {
+                          setProductPreview("show"),
+                            productIdHolder(items.productId);
+                        }
+                      }}
                     >
                       <img src={items.img} alt="" />
                     </div>
@@ -174,13 +175,19 @@ function Store() {
                         <div className={style.productPrice}>
                           <LiaRupeeSignSolid /> {items.price}
                         </div>
-                        <div
-                          key={items.item}
-                          className={style.addButton}
-                          onClick={()=>addToCart(items)}
-                        >
-                          Add to Cart
-                        </div>
+
+                        {cartItems.some(
+                          (cartItem) => cartItem.productId === items.productId
+                        ) ? (
+                          <div className={style.added}>Item added</div>
+                        ) : (
+                          <div
+                            className={style.addButton}
+                            onClick={() => addToCart(items)}
+                          >
+                            Add to Cart
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -188,9 +195,9 @@ function Store() {
               </div>
             </div>
           ) : (
-            <ProductPreview
-              setProductPreview={setProductPreview}/>
-          )}
+            <ProductPreview setProductPreview={setProductPreview} />
+          )
+          }
           <HalfBanner />
           <Companies></Companies>
         </div>

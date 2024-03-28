@@ -1,5 +1,5 @@
 import styles from "./Banner.module.css";
-
+import {Link} from "react-router-dom"
 function Banner() {
   return (
     <>
@@ -9,7 +9,7 @@ function Banner() {
             <div className={styles.bannerTitle1}>Apple</div>
             <div className={styles.bannerTitle2}>wireless</div>
             <div className={styles.bannerDescription}>AIRPODS</div>
-            <div className={styles.bannerButoon}>Buy Now</div>
+          <Link to="/Store"><div className={styles.bannerButoon}>Explore</div></Link>
           </div>
           <div className={styles.bannerImg}><img src="/images/airpods.png" alt="" /></div>
         </div>

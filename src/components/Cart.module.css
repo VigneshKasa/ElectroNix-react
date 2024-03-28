@@ -40,6 +40,15 @@
     justify-content: space-evenly;
 }
 
+.noProduct {
+    display: flex;
+    justify-content: center;
+    color: #0886e0;
+    margin-top: 50px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
 .productList {
     display: flex;
     justify-content: center;
@@ -270,8 +279,13 @@
 
     }
 
+    .noProduct {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
     .proceedContainer {
-        width:100%;
+        width: 100%;
         border: 2px solid #dcdcdc;
     }
 
@@ -280,7 +294,7 @@
         font-weight: bolder;
         border-bottom: 2px solid black;
         padding: 10px 0px;
-        font-size:10px;
+        font-size: 10px;
         justify-content: space-evenly;
     }
 
@@ -316,7 +330,7 @@
     .productType {
         display: flex;
         justify-content: center;
-        font-size:10px;
+        font-size: 10px;
         color: gray;
     }
 
@@ -354,7 +368,7 @@
         display: flex;
         align-items: center;
         padding: 2px 5px;
-        font-size:15px;
+        font-size: 15px;
         border-radius: 5px;
         font-weight: bolder;
         cursor: pointer;
@@ -364,7 +378,7 @@
     .productPrice {
         display: flex;
         width: 20%;
-        font-size:10px;
+        font-size: 10px;
         align-items: center;
     }
 
@@ -428,7 +442,7 @@
         font-size: larger;
         border-bottom: 3px solid #dcdcdc;
         padding: 20px 5px;
-        font-size:18px;
+        font-size: 18px;
         font-weight: bolder;
     }
 
@@ -456,7 +470,7 @@
 
     .summaryInfo {
         display: flex;
-        font-size:15px;
+        font-size: 15px;
         align-items: center;
         justify-content: space-between;
     }
@@ -493,7 +507,7 @@
     }
 }
 
-@media only screen and ((max-width:800px) and (min-width:601px)){
+@media only screen and ((max-width:800px) and (min-width:601px)) {
     .holder {
         display: flex;
         flex-direction: column;
@@ -520,8 +534,13 @@
 
     }
 
+    .noProduct {
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+
     .proceedContainer {
-        width:100%;
+        width: 100%;
         border: 2px solid #dcdcdc;
     }
 
@@ -530,7 +549,7 @@
         font-weight: bolder;
         border-bottom: 2px solid black;
         padding: 10px 0px;
-        font-size:15px;
+        font-size: 15px;
         justify-content: space-evenly;
     }
 
@@ -566,7 +585,7 @@
     .productType {
         display: flex;
         justify-content: center;
-        font-size:12px;
+        font-size: 12px;
         color: gray;
     }
 
@@ -604,7 +623,7 @@
         display: flex;
         align-items: center;
         padding: 2px 5px;
-        font-size:15px;
+        font-size: 15px;
         border-radius: 5px;
         font-weight: bolder;
         cursor: pointer;
@@ -614,7 +633,7 @@
     .productPrice {
         display: flex;
         width: 20%;
-        font-size:15px;
+        font-size: 15px;
         align-items: center;
     }
 
@@ -674,11 +693,13 @@
         cursor: pointer;
     }
 
+    
+
     .summaryTitle {
         font-size: larger;
         border-bottom: 3px solid #dcdcdc;
         padding: 20px 5px;
-        font-size:18px;
+        font-size: 18px;
         font-weight: bolder;
     }
 
@@ -706,7 +727,7 @@
 
     .summaryInfo {
         display: flex;
-        font-size:15px;
+        font-size: 15px;
         align-items: center;
         justify-content: space-between;
     }
@@ -742,7 +763,8 @@
         transform: scale(1.05);
     }
 }
-@media only screen and ((max-width:1180px) and (min-width:801px)){
+
+@media only screen and ((max-width:1180px) and (min-width:801px)) {
 
     .proceedContainer {
         padding: 10px;
@@ -757,7 +779,7 @@
     .promoContainer {
         padding: 20px 20px;
         display: flex;
-        gap:10px;
+        gap: 10px;
         flex-wrap: wrap;
         justify-content: space-between;
         border-bottom: 3px solid #dcdcdc;
@@ -790,7 +812,7 @@
         font-size: larger;
         border-bottom: 3px solid #dcdcdc;
         padding: 20px 5px;
-        font-size:18px;
+        font-size: 18px;
         font-weight: bolder;
     }
 
@@ -804,7 +826,7 @@
     .summaryEstimatedTotal {
         display: flex;
         flex-direction: column;
-        gap:10px;
+        gap: 10px;
         font-weight: bold;
         justify-content: space-between;
         padding: 20px 20px;
@@ -815,14 +837,14 @@
     .summaryInfoContainer {
         display: flex;
         flex-direction: column;
-        gap:10px;
-        align-items:flex-start;
+        gap: 10px;
+        align-items: flex-start;
         justify-content: start;
     }
 
     .summaryInfo {
         display: flex;
-        font-size:20px;
+        font-size: 20px;
         align-items: flex-start;
         justify-content: space-between;
     }
